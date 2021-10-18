@@ -19,7 +19,7 @@
         :key="content",
         :value="content"
       )
-        v-card(v-if="content == 'store'", flat="") 
+        v-card(v-if="content == 'store'", height="300px", flat="") 
           store
         v-card(v-else-if="content == 'show'", height="300px", flat="") 
           show

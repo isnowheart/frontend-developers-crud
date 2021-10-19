@@ -40,14 +40,8 @@ export default {
     return {
       getdev: {
         id: null,
-        name: null,
-        gender: null,
-        hobby: null,
-        birthdate: null,
       },
       developers: [],
-      dialog: false,
-      dialogDelete: false,
     };
   },
 

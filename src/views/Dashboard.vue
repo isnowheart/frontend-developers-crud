@@ -5,7 +5,7 @@
     v-tabs(v-model="tabs", align-with-title="")
       v-spacer
       v-tab(href="#store")
-        | Criar
+        store
       v-tab(href="#show")
         | Consultar
       v-tab(href="#developersList")
@@ -20,7 +20,6 @@
         :value="content"
       )
         v-card(v-if="content == 'store'", height="300px", flat="") 
-          store
         v-card(v-else-if="content == 'show'", height="300px", flat="") 
           show
         v-card(v-else-if="content == 'developersList'", flat="")

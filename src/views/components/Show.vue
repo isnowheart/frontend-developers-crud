@@ -33,24 +33,9 @@ v-container.my-5
 </template>
 
 <script>
-import Developer from "../../services/DeveloperDataService";
+import { developerMixin } from "../../mixins/developerMixin";
 
 export default {
-  data() {
-    return {
-      getdev: {
-        id: null,
-      },
-      developers: [],
-    };
-  },
-
-  methods: {
-    showDeveloper() {
-      Developer.show(this.getdev.id).then((response) => {
-        this.getdev = response.data;
-      });
-    },
-  },
+  mixins: [developerMixin],
 };
 </script>

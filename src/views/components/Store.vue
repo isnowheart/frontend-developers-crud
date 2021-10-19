@@ -57,31 +57,10 @@ v-row(justify="center")
 </template>
 
 <script>
-import Developer from "../../services/DeveloperDataService";
+import { developerMixin } from "../../mixins/developerMixin";
 
 export default {
-  data() {
-    return {
-      newdev: {
-        name: null,
-        gender: null,
-        hobby: null,
-        birthdate: null,
-      },
-      dialog: false,
-    };
-  },
-  methods: {
-    storeDeveloper() {
-      Developer.store(this.newdev)
-        .then((response) => {
-          this.newdev = {};
-        })
-        .catch((e) => {
-          console.log(e);
-        });
-    },
-  },
+  mixins: [developerMixin],
 };
 </script>
 

@@ -37,10 +37,7 @@ export default {
     msg: String,
   },
   data: () => ({
-    fab: false,
-    hidden: false,
     tabs: null,
-    dialog: false,
   }),
   components: { Store, Show, DevelopersList },
 };

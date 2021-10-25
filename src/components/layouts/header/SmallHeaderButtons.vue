@@ -5,8 +5,6 @@ v-card#lateral
     router-link(style="text-decoration: none", :to="{ name: 'Dashboard' }") 
       img(src="../../../assets/new-logo.svg", alt="alt", height="60")
     v-spacer
-    router-link(:to="{ name: 'About' }") 
-      strong Sobre
     v-btn(
       href="https://github.com/isnowheart/frontend-developers-crud",
       target="_blank",

@@ -2,12 +2,13 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
-import VueMask from 'v-mask';
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+import Toaster from 'v-toaster'
+import 'v-toaster/dist/v-toaster.css'
 
 Vue.config.productionTip = false
-Vue.use(VueMask);
+Vue.use(Toaster, {timeout: 3000})
 Vue.use(VueAxios, axios)
 
 new Vue({

@@ -1,35 +1,11 @@
 <template lang="pug">
 #app
   v-card#lateral
-  v-toolbar(dark="", tabs="", flat="", color="#1C4E8D")
-    v-tabs(v-model="tabs", align-with-title="")
-      v-spacer
-      v-tab(href="#store")
-        store
-      v-tab(href="#show")
-        | Consultar
-      v-tab(href="#developersList")
-        | Listar todos
-      v-tabs-slider(color="pink")
-      v-spacer
-  v-card-text 
-    v-tabs-items(v-model="tabs") 
-      v-tab-item(
-        v-for="content in ['store', 'show', 'developersList']",
-        :key="content",
-        :value="content"
-      )
-        v-card(v-if="content == 'store'", height="300px", flat="") 
-        v-card(v-else-if="content == 'show'", height="300px", flat="") 
-          show
-        v-card(v-else-if="content == 'developersList'", flat="")
-          developers-list
+  developers-list
 </template>
 
 <script>
-import DevelopersList from "./components/DevelopersList.vue";
-import Store from "./components/Store.vue";
-import Show from "./components/Show.vue";
+import DevelopersList from "../components/DevelopersList.vue";
 
 export default {
   name: "Dashboard",
@@ -39,6 +15,6 @@ export default {
   data: () => ({
     tabs: null,
   }),
-  components: { Store, Show, DevelopersList },
+  components: { DevelopersList },
 };
 </script>

@@ -2,17 +2,13 @@
 v-card#lateral
   v-toolbar(dark="", tabs="", flat="", color="#1C4E8D")
     v-spacer
-    v-toolbar-title 
     router-link(style="text-decoration: none", :to="{ name: 'Dashboard' }") 
-      strong Início
+      img(src="../../../assets/new-logo.svg", alt="alt", height="60")
     v-spacer
-    img(src="../../../assets/new-logo.svg", alt="alt", height="60")
-    v-spacer
-    router-link(style="text-decoration: none", :to="{ name: 'About' }") 
+    router-link(:to="{ name: 'About' }") 
       strong Sobre
-    v-spacer
     v-btn(
-      href="https://github.com/isnowheart/front-developers-crud",
+      href="https://github.com/isnowheart/frontend-developers-crud",
       target="_blank",
       text=""
     )
@@ -21,7 +17,9 @@ v-card#lateral
 </template>
 
 <style>
-strong {
+a,
+strong,
+router-link {
   font-size: 30px;
   text-decoration: none;
 }

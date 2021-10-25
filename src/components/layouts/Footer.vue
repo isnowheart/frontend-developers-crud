@@ -3,7 +3,7 @@
   .divider
   footer
     a(
-      href="https://github.com/isnowheart/front-developers-crud",
+      href="https://github.com/isnowheart/frontend-developers-crud",
       target="_blank"
     ) API REST — Gazin — {{ new Date().getFullYear() }}
     code
@@ -30,5 +30,18 @@ export default {
   bottom: 0;
   width: 100%;
   padding-bottom: 0px;
+}
+
+footer {
+  background: #343434;
+}
+
+code {
+  text-decoration: none;
+  background: none;
+}
+
+a {
+  font-size: 16px;
 }
 </style>

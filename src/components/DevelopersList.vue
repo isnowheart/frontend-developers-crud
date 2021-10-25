@@ -67,7 +67,9 @@ export default {
           });
         }
       } catch (error) {
+        this.dialog = false;
         this.developer = {};
+        this.readOnly = true;
         this.$toaster.error(`ID não encontrado. ${error}.`, {
           timeout: 8000,
         });
